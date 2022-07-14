@@ -1,0 +1,3 @@
+select#paises option[value="argentina"]   { background-image:url(https://techo.org/denuncia/assets/images/argentina.png);   }
+select#paises option[value="bolivia"] { background-image:url(/assets/images/bolivia.png); }
+select#paises option[value="brasil"] { background-image:url(assets/images/brasil.png); }

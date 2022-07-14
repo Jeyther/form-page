@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Denuncia</title>
+    <link rel="stylesheet" href="assets\css\stylesheet.css">
+    <link rel="stylesheet" href="assets\css\paises.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="nav">
+
+            <div class="nav__logo"><img src="assets\images\rgb_logo.png" alt="techo_logo"></div>
+
+        </div>
+
+    </header>
+
+    <div class="bg-box"></div>
+    <main class="container">
+
+        <div class="bg-img"><img src="assets\images\violencia_genero.jpg" alt="violencia_genero"></div>
+        <div class="form shadow">
+            <form action="" method="post">
+                <p class="form__title">Contáctenos</p>
+
+                <label for="tipo">Quiéres denunciar una:</label>
+                <select name="tipo" id="tipo">
+                    <option value="Discriminación por género">Discriminación por género</option>
+                    <option value="Acoso sexual">Acoso sexual</option>
+                    <option value="Violencia sexual">Violencia sexual</option>
+                    <option value="Otro">Otro:</option>
+                </select>
+
+                <label for="vitima">¿Eres la víctima?</label>
+                <select name="vitima" id="vitima">
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label for="identificarse">Para una mejor verificación de los hechos sería muy importante poder conversar personalmente con usted. El presente canal es confidencial, solamente la persona encargada en dar seguimiento a la denuncia tendrá acceso al nombre del denunciante. Es un derecho de la persona que denuncia el no identificarse. Dicho eso ¿quieres identificarte?</label>
+                <select name="identificarse" id="identificarse">
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+
+                <div class="col-lg-4 col-md-4">
+                    <label class="col-sm-12 col-form-label">Nombre completo:</label>
+                    <input class="form-control" type="text" name="nombre" id="nombre"/>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <label class="col-sm-12 col-form-label">Celular:</label>
+                    <input class="form-control" type="text" name="celular" id="celular"/>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <label class="col-sm-12 col-form-label">Correo:</label>
+                    <input class="form-control" type="text" name="correo" id="correo"/>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <label class="col-sm-12 col-form-label">¿Cuál es la mejor forma para contactarse contigo?:</label>
+                    <input class="form-control" type="text" name="contactar" id="contactar"/>
+                </div>
+
+                <label for="vitima">Oficina encargada:</label>
+                <select id="paises">
+                    <option value="argentina">Argentina</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="brasil">Brasil</option>
+                </select>  
+
+                <div class="col-lg-4 col-md-4">
+                    <label class="col-sm-12 col-form-label">Nombre de la persona/s agresora/s:</label>
+                    <input class="form-control" type="text" name="agresor" id="agresor"/>
+                </div>
+
+                <label for="vitima">El hecho ocurrió en:</label>
+                <select name="ocurrio" id="ocurrio">
+                    <option value="Actividad de TECHO">Actividad de TECHO</option>
+                    <option value="Oficina de TECHO">Oficina de TECHO</option>
+                    <option value="Comunidad">Comunidad</option>
+                    <option value="Espacio no oficial">Espacio no oficial</option>
+                    <option value="Otro">Otro:</option>
+                </select>
+
+                <div class="col-lg-4 col-md-4">
+                    <label class="col-sm-12 col-form-label">¿Cuándo ocurrió el/los hecho/s?
+                        Caso que no haya o no sepa la fecha específica no hay problema, esa información no es necesaria para el seguimiento de la denuncia</label>
+                    <input class="form-control" type="text" name="cuando" id="cuando"/>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <label class="col-sm-12 col-form-label">¿Puede hacer una breve narración de el/los hecho/s?</label>
+                    <textarea id="message" rows="10"></textarea>
+                </div>
+                <a href="#" class="form__button">Enviar</a>
+            </form>
+        </div>
+        <div class="text-box shadow">
+            <h1>Nuestra misión es brindar ayuda y asistencia a las victimas de violencia de genero</h1>
+        </div>
+        <div class="circle"></div>
+        
+    </main>
+    
+    <footer class="footer">
+        <p>Footer</p>
+    </footer>
+
+</body>
+</html>
