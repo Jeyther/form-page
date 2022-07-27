@@ -333,7 +333,7 @@ p {
   margin: 6rem auto; }
   @media (max-width: 768px) {
     .container {
-      height: 140rem; } }
+      height: 160rem; } }
 
 a {
   text-decoration: none;
@@ -489,6 +489,11 @@ h4 {
         .form__step__body > div > label > span {
           font-size: 1.2rem;
           opacity: .7; }
+        .form__step__body > div input, .form__step__body > div select, .form__step__body > div textarea {
+          font-size: 1.8rem;
+          border: none;
+          border-bottom: 2px solid black;
+          padding: 1rem 1.2rem; }
         .form__step__body > div textarea {
           resize: none; }
     .form__step__footer {
@@ -519,16 +524,6 @@ h4 {
     flex-direction: column;
     gap: 2rem;
     width: 100%; }
-  .form__input, .form__input-message {
-    font-size: 2rem;
-    border: none;
-    border-bottom: 2px solid black;
-    padding: 1rem 1.2rem; }
-    @media (max-width: 480px) {
-      .form__input, .form__input-message {
-        font-size: 1.6rem; } }
-  .form__input-message {
-    resize: none; }
 
 .bg-img {
   position: absolute;
@@ -590,8 +585,15 @@ h4 {
 .hidden {
   display: none !important; }
 
-.error {
-  border-color: red; }
+.error input, .error textarea {
+  border-bottom: 2px solid red !important; }
+
+.error:after {
+  content: "Este campo es obligatorio.";
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: red;
+  margin-top: -.5rem; }
 
 .nav {
   background-color: white;

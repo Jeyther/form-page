@@ -140,7 +140,7 @@
                                 </select>
                             </div>
                             <div>
-                                <label>Nombre de la persona/s agresora/s:</label>
+                                <label>Nombre de la/s persona/s agresora/s:</label>
                                 <input type="text" name="agresor" id="agresor" />
                             </div>
                             <div>
@@ -159,10 +159,10 @@
                             </div>
                         </div>
                         <div class="form__step__footer">
-                            <button type="button" onclick="validar_s3()"
-                                class="form__step__button form__step__button--back" data-to_step="2"
+                            <button type="button" class="form__step__button form__step__button--back" data-to_step="2"
                                 data-step="3">Regresar</button>
-                            <button type="button" class="form__step__button form__step__button--next" data-to_step="4"
+                            <button type="button" onclick="validar_s3()"
+                                class="form__step__button form__step__button--next" data-to_step="4"
                                 data-step="3">Siguiente</button>
                         </div>
                     </div>
@@ -176,7 +176,7 @@
                                     es
                                     necesaria
                                     para el seguimiento de la denuncia</label>
-                                <input type="text" name="cuando" id="cuando" />
+                                <input type="date" name="cuando" id="cuando" />
                             </div>
 
                             <div>
@@ -188,7 +188,7 @@
                         <div class="form__step__footer">
                             <button type="button" class="form__step__button form__step__button--back" data-to_step="3"
                                 data-step="4">Regresar</button>
-                            <button type="submit" class="form__step__button">Enviar</button>
+                            <button type="submit" onclick="validar_s4()" class="form__step__button">Enviar</button>
                         </div>
                     </div>
 
