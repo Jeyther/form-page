@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets\css\stylesheet.css">
     <link rel="stylesheet" href="assets\css\paises.css">
 	<link rel="shortcut icon" href="assets\images\favicon.ico">
+    <link rel="stylesheet" href="assets\css\modal.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     </header>
     <div class="bg-box"></div>
     <main class="container">
-        <div class="bg-img"><img src="assets\images\denuncia.png" alt="violencia_genero"></div>
+        <div class="bg-img"><img src="assets\images\teste.png" alt="violencia_genero"></div>
         <div class="form">
             <form action="" method="post">
                 <div class="form__header shadow">
@@ -76,6 +77,9 @@
                             <button type="button" onclick="validar_s1()" value="validar"
                                 class="form__step__button form__step__button--next" data-to_step="2"
                                 data-step="1">Siguiente</button>
+                                <button type="button" hidden class="open-modal" data-open="modal2" id="btnModalClick">
+                                    Modal
+                                  </button>
                         </div>
                     </div>
 
@@ -170,7 +174,7 @@
                         <div class="form__step__footer">
                             <button type="button" class="form__step__button form__step__button--back" data-to_step="3"
                                 data-step="4">Regresar</button>
-                            <button type="submit" onclick="validar_s4()" class="form__step__button">Enviar</button>
+                            <button type="button" onclick="validar_s4()" class="form__step__button">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -186,10 +190,23 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <p>Footer</p>
-    </footer>
+    <div class="modal" id="modal2">
+        <div class="modal-dialog">
+          <header class="modal-header">
+            Datos Enviados con Éxito.
+            <button class="close-modal" aria-label="close modal" data-close id="cerrarWindow">
+              ✕  
+            </button>
+          </header>
+          <section class="modal-content">
+            <p><strong>Gracias por ponerte en contacto</strong></p>
+            <p>Lamentamos que hayas pasado por una situación en que sentiste tu seguridad amenazada. Reconocemos que las desigualdades que se representan en la sociedad, se reflejan en sus instituciones. En coherencia con esto trabajamos proactivamente por prevenir y acabar con cualquier tipo de desigualdad que se pueda manifestar dentro de nuestra organización. Nos comprometemos a dar seguimiento a la presente denuncia de la forma más diligente y prolija posible.</p>
+          </section>
+        </div>
+      </div>
+
     <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/modal.js"></script>
 </body>
 
 </html>

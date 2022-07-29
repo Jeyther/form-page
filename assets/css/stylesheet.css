@@ -337,7 +337,7 @@ p {
 
 a {
   text-decoration: none;
-  color: black; }
+/*  color: black; */}
 
 img,
 picture {
@@ -541,10 +541,11 @@ h4 {
 
 .bg-box {
   position: absolute;
-  top: 25rem;
-  background-color: #ADD7E9;
+  top: 5rem;
+  background-image: url('../images/bgcolor2.png');
+  background-size: cover;
   width: 100%;
-  height: 56rem;
+  height: 120vh;
   z-index: -1; }
   @media (max-width: 768px) {
     .bg-box {

@@ -7,17 +7,33 @@
 
     header('Content-Type: application/json; charset=UTF-8',true);
     $action = $_POST['action'];
-   
+
     switch ($action)
       {
-        case 'saveData'	: saveData($_POST);
+        case 'save'	: saveData($_POST);
         break; 
       }
             
-      function saveData($aPost)
+      function saveData($request)
       {
-			echo('<pre>');
-			die(print_r($aPost));
+
+        require_once '../model/Model.php';
+        $oBj = new Model();
+        $response = $oBj->save($request);
+          
+          if($response)
+          {
+            $aRet = array('message' => 'Datos Enviados con Éxito',
+                          'success' => true,
+                          'code'  => 200);
+          }
+          else {
+            $aRet = array('message' => 'Erro al Enviar Datos, contacta el administrador del Sistema.',
+                          'success' => false,
+                          'code'  => 404);
+          }
+
+          echo(json_encode($aRet));
       }	
 ?>                    
 

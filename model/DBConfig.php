@@ -5,13 +5,13 @@ class Database
     
     private function __construct()
     {
-        $db_host = "67.225.255.249";
+        $db_host = "localhost";
         $db_nome = "techo_canal_denuncias";
-        $db_usuario = "techo_elias";
-        $db_senha = "2184514";
+        $db_usuario = "techo_sistemas";
+        $db_senha = "ydkxX1V386";
         $db_driver = "mysql";
        
-        $sistema_titulo = "Sistema";
+        $sistema_titulo = "Canal de Denuncia";
         $sistema_email = "elias.lima@techo.org";
         try
         {

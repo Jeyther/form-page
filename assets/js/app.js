@@ -75,7 +75,7 @@ const validar_s3 = () => {
 };
 
 const validar_s4 = (e) => {
-  e.preventDefault();
+//  e.preventDefault();
 
   if (cuando.value == '') {
     cuando.parentElement.classList.add('error');
@@ -90,6 +90,32 @@ const validar_s4 = (e) => {
   } else {
     narracion.parentElement.classList.remove('error');
     camposValidos = true;
+  }
+
+  if (camposValidos) {
+    
+    let action = "save";
+    let tipo = document.getElementById('tipo').value;
+    let otro_denuncia = document.getElementById('otro_denuncia').value;
+    let victima = document.getElementById('victima').value;
+    let identificarse = document.getElementById('identificarse').value;
+    let nombre = document.getElementById('nombre').value;
+    let celular = document.getElementById('celular').value;
+    let correo = document.getElementById('correo').value;
+    let contactar = document.getElementById('contactar').value;
+    let paises = document.getElementById('paises').value;
+    let agresor = document.getElementById('agresor').value;
+    let ocurrio = document.getElementById('ocurrio').value;
+    let otro_ocurrio = document.getElementById('otro_ocurrio').value;
+    let cuando = document.getElementById('cuando').value;
+    let narracion = document.getElementById('narracion').value;
+
+    var request = new XMLHttpRequest();
+    request.open('POST', 'https://techo.org/denuncia/controller/controller.php', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send("action="+action+"&tipo="+tipo+"&otro_denuncia="+otro_denuncia+"&victima="+victima+"&identificarse="+identificarse+"&nombre="+nombre+"&celular="+celular+"&correo="+correo+"&contactar="+contactar+"&paises="+paises+"&agresor="+agresor+"&ocurrio="+ocurrio+"&otro_ocurrio="+otro_ocurrio+"&cuando="+cuando+"&narracion="+narracion);
+    console.log(request);
+    document.getElementById('btnModalClick').click();
   }
 };
 
@@ -153,3 +179,9 @@ form.addEventListener('click', function (e) {
     jumpStep.classList.remove('inactive');
   }
 });
+
+document.getElementById("cerrarWindow").addEventListener("click", windowClose);
+
+function windowClose() {
+  window.location.reload();
+}
