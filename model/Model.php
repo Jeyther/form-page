@@ -2,10 +2,10 @@
 
 class Model
 {  
-    function select()
+    function read()
     {
         require_once 'DBConfig.php';
-        $sql  = "SELECT * FROM datos";
+        $sql  = "SELECT * FROM datos WHERE id_destino = 0";
         $pdo = Database::conexao();
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
