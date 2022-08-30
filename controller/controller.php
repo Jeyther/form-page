@@ -10,8 +10,11 @@
 
     switch ($action)
       {
-        case 'save'	: saveData($_POST);
-        case 'read'	: readData();
+        case 'save'	   : saveData($_POST);
+        break;
+        case 'read'	   : readData();
+        break;
+        case 'process' : processData($_POST);
         break; 
       }
             
@@ -46,7 +49,7 @@
         if(!empty($response))
         {
               $html  = '';
-              $html  = '<table class="table custom-table">';
+              $html  = '<table id="example" class="display" style="width:100%">';
               $html .= '<thead>';
               $html .= '<tr>';
               $html .= '<th scope="col">';
@@ -68,7 +71,7 @@
                   $html .= '<tr>';
                   $html .= '<th scope="row">';
                   $html .= '<label class="control control--checkbox">';
-                  $html .= '<input type="checkbox"/>';
+                  $html .= '<input type="checkbox" name="checks" id="'.$v['id'].'"/>';
                   $html .= '<div class="control__indicator"></div>';
                   $html .= '</label>';
                   $html .= '</th>';
@@ -102,6 +105,23 @@
         }
 
         echo json_encode(array("results" => $html, "response" => $response));
+      }
+
+      function processData($request)
+      {
+        require_once '../model/Model.php';
+        $oBj = new Model();
+
+        foreach ($request['ids'] as $value) {
+          $response = $oBj->update($value, $request['pais']);
+        }
+
+        $aRet = array('message' => 'Denuncia Tranferiada al País',
+                        'success' => true,
+                        'code'  => 200);
+
+        echo(json_encode($aRet));
+       
       }
 ?>                    
 

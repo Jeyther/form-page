@@ -1,33 +1,42 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/grid/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="assets/grid/css/owl.carousel.min.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/grid/css/bootstrap.min.css">
-    <!-- Style -->
-    <link rel="stylesheet" href="assets/grid/css/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-confirm.css">
     <title>Denuncias LATAM</title>
   </head>
   <body>
+    <div>
+      <label for="paises">Enviar denuncia Para:</label>
+      <select id="paises">
+        <option value="0">-- SELECCIONAR -- </option>
+          <option value="1">Argentina</option>
+          <option value="2">Bolivia</option>
+          <option value="3">Brasil</option>
+          <option value="4">Colombia</option>
+          <option value="5">Costa Rica</option>
+          <option value="6">Ecuador</option>
+          <option value="7">El Salvador</option>
+          <option value="8">Guatemala</option>
+          <option value="9">Haiti</option>
+          <option value="10">Honduras</option>
+          <option value="11">Mexico</option>
+          <option value="12">Nicaragua</option>
+          <option value="13">Panama</option>
+          <option value="14">Paraguay</option>
+          <option value="15">Peru</option>
+          <option value="16">Republica Dominicana</option>
+          <option value="17">Uruguay</option>
+          <option value="18">Venezuela</option>
+      </select>
+  </div><button type="button" id="btn-process">Enviar</button><br><br>
+    <div id="listagem">
 
-  <div class="content">
-    
-    <div class="container">
-      <h2 class="mb-5">Denuncias LATAM</h2>
-
-      <div class="table-responsive" id="listdenuncias">
-      </div>
     </div>
-  </div>
-    <script src="assets/grid/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/grid/js/popper.min.js"></script>
-    <script src="assets/grid/js/bootstrap.min.js"></script>
-    <script src="assets/grid/js/main.js"></script>
-    <script src="assets/js/grid.js"></script>
   </body>
+  <script type="text/javascript" src="assets/js/datatables.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-confirm.js"></script>
+  <script src="assets/js/grid.js"></script>
 </html>

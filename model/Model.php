@@ -67,5 +67,28 @@ class Model
         
         return $success;
     }
+
+    function update($id, $pais)
+    {
+        require_once 'DBConfig.php';
+        $sql  = "UPDATE datos
+        SET id_destino = " .$pais . " 
+        WHERE id = " . $id;
+        $pdo = Database::conexao();
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $retorno = $stmt->rowCount();
+        
+        if($retorno == 1)
+        {
+            $success = true;
+        }
+        else
+        {
+            $success = false;
+        }
+        
+        return $success;
+    }
 }
 ?>
